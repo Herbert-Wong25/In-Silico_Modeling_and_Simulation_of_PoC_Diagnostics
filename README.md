@@ -13,11 +13,34 @@ This project utilized **In Silico Modeling** to:
 1. **Automate Reagent Delivery:** Using paper geometry and fluidic physics to time the arrival of amplification reagents without user intervention.
 2. **Optimize Molecular Capture:** Using kinetic modeling to compare the performance of Nanobodies (Nb) vs. Monoclonal Antibodies (mAb) under flow.
 
+![Open View of Assembled LFA Device](design_blueprints/LFA_Assembled_View.png)
+*Figure 1: 3D assembly of the automated LFIA device designed in SolidWorks, featuring independent channels for sample, wash buffer, and amplification reagents.*
+
 ## 🛠 Tech Stack & Dependencies
 
 * **Computational Modeling:** Python (NumPy, SciPy, Pandas)
 * **CAD/Design:** SolidWorks (Device architecture)
 * **Data Analysis:** Matplotlib, Seaborn
 * **Core Concepts:** Washburn’s Law, Langmuir Kinetics, Mass Transport, Microfluidics
+
+---
+
+## 🚀 The Simulation Pipeline
+
+### Part 1: Fluid Dynamics & Device Dimensioning
+
+To automate the assay, I modeled the capillary flow (wicking) through nitrocellulose membranes.
+
+* **Notebook:** `01_Fluid_Dynamics_and_LFA_Design_Optimization.ipynb`
+* **Innovation:** Implemented **linear interpolation** to estimate fluidic parameters (viscosity, surface tension) for non-standard channel widths (3mm, 4mm), enabling the design of custom "Design 2" geometry.
+* **Result:** Determined exact channel lengths ($L_1, L_2, L_3$) to ensure reagents arrive at the test line at specific 2-minute and 5-minute intervals.
+
+### Part 2: Multi-Phase Binding Kinetics
+
+I modeled the chemical interaction at the test line to predict the Limit of Detection (LoD).
+
+* **Notebook:** `02_Binding_Kinetics_Modeling.ipynb`
+* **3-Phase Model:** Simulated the arrival (Phase 1), binding (Phase 2), and wash/purification (Phase 3) of the nanoparticle-target complex.
+* **Finding:** Validated that **Nanobody 59H10** achieved superior capture efficiency in short time-frames compared to standard mAbs, making it the ideal candidate for rapid PoC detection.
 
 ---
