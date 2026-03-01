@@ -1,2 +1,9 @@
-# In-Silico_Modeling_and_Simulation_of__PoC_Diagnostics
-Imperial MRes Thesis (Distinction). A comprehensive research project focused on the simulation-guided design and kinetic modeling of automated, nanocatalyst-amplified Immunoassays. This project integrates fluid dynamics and binding kinetics to optimize next-generation Point-of-Care (PoC) diagnostic devices for rapid infectious disease detection.
+# Modeling and Simulation of Automated PoC Diagnostics
+
+### **Awarded Distinction | MRes in Bioengineering, Imperial College London (2020)**
+
+This repository showcases the computational research and design optimization for my Master's thesis. The project focused on the **simulation-guided development** of an automated, nanocatalyst-amplified Lateral Flow Immunoassay (LFIA). By integrating fluid dynamics and molecular binding kinetics, I developed a predictive model to automate complex, multi-step diagnostic assays into a single, user-friendly Point-of-Care (PoC) device.
+
+## 🔬 Scientific Context
+
+Traditional Lateral Flow Assays (like rapid COVID tests) are fast but often lack the sensitivity required for early-stage disease detection. **Nanocatalysts (e.g., Platinum Nanoparticles - PtNPs)** can amplify signals to ELISA-like sensitivity, but they require precise, multi-step "wash and develop" sequences.
